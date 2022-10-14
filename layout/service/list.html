@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(function () {
+            $("#includedContent").load("../header.html");
+            $("#includedFooter").load("../footer.html");
+        });
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" id="includedContent"></div>
+
+    <div class="row">
+        <h2 class="list-facility" style="font-family: 'Nirmala UI'">Các Loại Dịch Vụ</h2>
+        <div class="list-facility-subtitle">
+            <p>
+                <a class="dropdown-item" href="create.html" style="color: blue">
+                    <svg style="width: 30px;height: 20px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+               Thêm Mới Dịch Vụ</a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <table id="facilityTable" class="container">
+            <thead>
+            <tr>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="row" style="margin-left: 50px">
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 280px;">
+                                <img src="https://resortdanang.info/wp-content/uploads/2018/12/phong-khach-villas-3-bedroom-furama-da-nang.jpg"
+                                     height="200px" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">House</h5>
+                                    <p class="card-text">Phòng House/Diện Tích 50 m2</p>
+                                    <a href="edit.html" class="btn btn-primary">Chỉnh Sửa</a>
+                                    <a href="#" class="btn btn-danger" style="float: right;width: 100px">Xóa</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 280px;">
+                                <img src="https://resortdanang.info/wp-content/uploads/2018/12/phong-khach-villas-3-bedroom-furama-da-nang.jpg"
+                                     height="200px" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">House</h5>
+                                    <p class="card-text">Phòng House/Diện Tích 50 m2</p>
+                                    <a href="#" class="btn btn-primary">Chỉnh Sửa</a>
+                                    <a href="#" class="btn btn-danger" style="float: right;width: 100px">Xóa</a>
+                                </div>
+                                <!--            </div>-->
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 280px;">
+                                <img src="https://resortdanang.info/wp-content/uploads/2018/12/phong-khach-villas-3-bedroom-furama-da-nang.jpg"
+                                     height="200px" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">House</h5>
+                                    <p class="card-text">Phòng House/Diện Tích 50 m2</p>
+                                    <a href="#" class="btn btn-primary">Chỉnh Sửa</a>
+                                    <a href="#" class="btn btn-danger" style="float: right;width: 100px">Xóa</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 280px;">
+                                <img src="https://resortdanang.info/wp-content/uploads/2018/12/phong-khach-villas-3-bedroom-furama-da-nang.jpg"
+                                     height="200px" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">House 1</h5>
+                                    <p class="card-text">Phòng House/Diện Tích 50 m2</p>
+                                    <a href="#" class="btn btn-primary">Chỉnh Sửa</a>
+                                    <a href="#" class="btn btn-danger" style="float: right;width: 100px">Xóa</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 280px;">
+                                <img src="https://resortdanang.info/wp-content/uploads/2018/12/phong-khach-villas-3-bedroom-furama-da-nang.jpg"
+                                     height="200px" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">House 2</h5>
+                                    <p class="card-text">Phòng House/Diện Tích 50 m2</p>
+                                    <a href="#" class="btn btn-primary">Chỉnh Sửa</a>
+                                    <a href="#" class="btn btn-danger" style="float: right;width: 100px">Xóa</a>
+                                </div>
+                                <!--            </div>-->
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 280px;">
+                                <img src="https://resortdanang.info/wp-content/uploads/2018/12/phong-khach-villas-3-bedroom-furama-da-nang.jpg"
+                                     height="200px" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">House</h5>
+                                    <p class="card-text">Phòng House/Diện Tích 50 m2</p>
+                                    <a href="#" class="btn btn-primary">Chỉnh Sửa</a>
+                                    <a href="#" class="btn btn-danger" style="float: right;width: 100px">Xóa</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" id="includedFooter"></div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#facilityTable').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 1
+        });
+    });
+</script>
+</body>
+</html>

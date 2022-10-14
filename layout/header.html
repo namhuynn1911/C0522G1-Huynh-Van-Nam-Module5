@@ -3,34 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-            crossorigin="anonymous"></script>
-<style>
-    nav {
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-attachment: fixed;
-        background-color: white;
-        background-image: url("https://wallpapercave.com/wp/DAVew11.jpg");
-    }
-    a {
-        text-decoration: none;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"/>
 
-    a:hover {
-        text-decoration: underline;
-    }
-
-
-</style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="container-fluid">
     <div class="row">
-        <header class="text-center" style="height: 100px">
+        <header style="height: 100px">
             <div style="background-color: cornsilk; border-top: 5px solid burlywood" class="row">
                 <div class="col-sm-3 col-lg-3 col-md-3 head">
                     <img src="https://www.furama.com/images/LOGOFurama_4C_Normal.png" width="280px" height="80px"
@@ -55,80 +37,88 @@
             </div>
         </header>
     </div>
-    <div>
-    <nav class="row navbar navbar-expand-lg bg-light d-flex stick-top">
-        <div class="col-4">
-            <a class="navbar-brand text-light" href="layout.html"><i class="fa-sharp fa-solid fa-house"></i></a>
-            <div class="collapse navbar-collapse" style="float: right">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Khách Hàng
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="@{/customer}">Danh Sách Khách Hàng</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="@{/customer/create}">Thêm Khách Hàng</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Nhân Viên
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="@{/employee}">Danh Sách Nhân Viên</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="@{/employee/create}">Thêm Nhân Viên</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Dịch Vụ
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="list.html">Danh Sách Dịch Vụ</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="@{/facility/create}">Thêm Dịch Vụ</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Hợp Đồng
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="@{/contract}">Danh Sách Hợp Đồng</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="@{/contract/create}">Thêm Hợp Đồng</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <div class="row">
+        <nav class="navbar navbar-expand-lg bg-light d-flex stick-top">
+            <div class="col-4">
+                <a class="navbar-brand text-light"  href="http://localhost:63342/layout/layout.html?">
+                    <svg style="width: 50px;height: 40px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                        <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707L7.293 1.5Z"/>
+                        <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z"/>
+                    </svg>
+                </a>
+                <div class="collapse navbar-collapse" style="float: right">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Khách Hàng
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="@{/customer}">Danh Sách Khách Hàng</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="@{/customer/create}">Thêm Khách Hàng</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Nhân Viên
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="@{/employee}">Danh Sách Nhân Viên</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="@{/employee/create}">Thêm Nhân Viên</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Dịch Vụ
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="service/list.html">Danh Sách Dịch Vụ</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="@{/facility/create}">Thêm Dịch Vụ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Hợp Đồng
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="@{/contract}">Danh Sách Hợp Đồng</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="@{/contract/create}">Thêm Hợp Đồng</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-8" style="margin-right: 20px">
-            <h2 style="font-family: 'Times New Roman';color: white;">
-                <marquee style="font-family:'Nirmala UI'">
-                    FURAMA RESORT XIN KÍNH CHÀO QUÝ KHÁCH!
-                </marquee>
-            </h2>
-        </div>
-    </nav>
+            <div class="col-8" style="margin-right: 20px">
+                <h2 style="font-family: 'Times New Roman';color: white;">
+                    <marquee style="font-family:'Nirmala UI'">
+                        FURAMA RESORT XIN KÍNH CHÀO QUÝ KHÁCH!
+                    </marquee>
+                </h2>
+            </div>
+        </nav>
     </div>
-
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
