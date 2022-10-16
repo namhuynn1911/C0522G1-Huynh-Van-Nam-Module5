@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(function () {
+            $("#includedContent").load("../header.html");
+            $("#includedFooter").load("../footer.html");
+        });
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" id="includedContent"></div>
+
+    <div class="row">
+        <h2 class="list-facility" style="font-family: 'Nirmala UI'">Các Loại Dịch Vụ</h2>
+        <div class="list-facility-subtitle">
+            <p>
+                <a class="dropdown-item" href="create.html" style="color: blue">
+                    <svg style="width: 30px;height: 20px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    Thêm Mới Dịch Vụ</a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+
+        <table class="table table-striped table-bordered" id="customerTable">
+            <thead>
+            <tr class="text-center bg-warning bg-opacity-50">
+                <th>Serial</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Id card</th>
+                <th>Phone number</th>
+                <th>Customer type</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <th>View</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Huỳnh Trung Thuyên</td>
+                <td>Male</td>
+                <td>206236476</td>
+                <td>0905678453</td>
+                <td>Diamond</td>
+                <td style="text-align: center">
+                    <a href="edit.html">
+                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <span class="text-danger"><i class="fa-solid fa-trash-can"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#viewCustomer">
+                        <span class="text-success"><i class="fa-solid fa-eye"></i></span>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Dương Văn Quan</td>
+                <td>Male</td>
+                <td>543432111</td>
+                <td>0490039241</td>
+                <td>Diamond</td>
+                <td style="text-align: center">
+                    <a href="edit.html">
+                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <span class="text-danger"><i class="fa-solid fa-trash-can"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#viewCustomer">
+                        <span class="text-success"><i class="fa-solid fa-eye"></i></span>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Hoàng Trần Nhi Anh</td>
+                <td>Female</td>
+                <td>096943753</td>
+                <td>0905467894</td>
+                <td>Diamond</td>
+                <td style="text-align: center">
+                    <a href="edit.html">
+                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <span class="text-danger"><i class="fa-solid fa-trash-can"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#viewCustomer">
+                        <span class="text-success"><i class="fa-solid fa-eye"></i></span>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Hoàng Trần Nhi Nhi</td>
+                <td>Female</td>
+                <td>795453345</td>
+                <td>0312345678</td>
+                <td>Silver</td>
+                <td style="text-align: center">
+                    <a href="edit.html">
+                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <span class="text-danger"><i class="fa-solid fa-trash-can"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#viewCustomer">
+                        <span class="text-success"><i class="fa-solid fa-eye"></i></span>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Nguyễn Hà Duyên</td>
+                <td>Female</td>
+                <td>206236476</td>
+                <td>0919436753</td>
+                <td>Diamond</td>
+                <td style="text-align: center">
+                    <a href="edit.html">
+                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <span class="text-danger"><i class="fa-solid fa-trash-can"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#viewCustomer">
+                        <span class="text-success"><i class="fa-solid fa-eye"></i></span>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Nguyễn Tâm Đắc</td>
+                <td>Male</td>
+                <td>432341235</td>
+                <td>0643343433</td>
+                <td>Platinium</td>
+                <td style="text-align: center">
+                    <a href="edit.html">
+                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <span class="text-danger"><i class="fa-solid fa-trash-can"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#viewCustomer">
+                        <span class="text-success"><i class="fa-solid fa-eye"></i></span>
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Phạm Xuân Diệu</td>
+                <td>Male</td>
+                <td>865342123</td>
+                <td>0954333333</td>
+                <td>Gold</td>
+                <td style="text-align: center">
+                    <a href="edit.html">
+                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#deleteCustomer">
+                        <span class="text-danger"><i class="fa-solid fa-trash-can"></i></span>
+                    </a>
+                </td>
+                <td style="text-align: center">
+                    <a data-bs-toggle="modal" data-bs-target="#viewCustomer">
+                        <span class="text-success"><i class="fa-solid fa-eye"></i></span>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!--    modal delete-->
+        <div class="modal fade" id="deleteCustomer" tabindex="-1" aria-labelledby="exampleModalLabel1"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel1">Are you sure to delete?</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form>
+                        <div class="modal-body">
+                            <span class="h6">Customer:</span><strong id="nameDelete" class="text-danger ps-2"></strong>
+                            <input type="hidden" name="id" id="idDelete"/>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-danger" value="delete">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="includedFooter"></div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    function remove(id, name) {
+        document.getElementById("idDelete").value = id;
+        document.getElementById("nameDelete").innerText = name;
+    }
+
+    $(document).ready(function () {
+        $('#customerTable').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 1
+        });
+    });
+</script>
+
+</body>
+</html>
