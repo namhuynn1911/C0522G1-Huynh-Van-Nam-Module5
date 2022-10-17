@@ -17,9 +17,9 @@
 <div class="container-fluid">
     <div class="row" id="includedContent"></div>
     <div class="row" id="form">
-        <h2>Add Facility</h2>
+        <h2>Thêm Mới Dịch Vụ</h2>
         <p>
-            <a href="list.html">Back to Employee list</a>
+            <a href="list.html">Quay Lại Danh Sách</a>
         </p>
         <form action="@{/facility/save}" object="${facilityDto}" method="post">
             <div>
@@ -94,8 +94,8 @@
             </div>
             <input type="submit" value="Save"/>
         </form>
-    </div>
-    <div class="row" id="includedFooter"></div>
+</div>
+<div class="row" id="includedFooter"></div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -133,41 +133,6 @@
             }
         }
     )
-
-    // function changeForm(type) {
-    //     let selectForm = type.value;
-    //     switch (selectForm) {
-    //         case "1":
-    //             document.getElementById("standardRoom").style.display = "block";
-    //             document.getElementById("description").style.display = "block";
-    //             document.getElementById("poolArea").style.display = "block";
-    //             document.getElementById("numberOfFloor").style.display = "block";
-    //             document.getElementById("facilityFree").style.display = "none";
-    //             break;
-    //         case "2":
-    //             document.getElementById("standardRoom").style.display = "block";
-    //             document.getElementById("description").style.display = "block";
-    //             document.getElementById("poolArea").style.display = "none";
-    //             document.getElementById("numberOfFloor").style.display = "block";
-    //             document.getElementById("facilityFree").style.display = "none";
-    //             break;
-    //         case "3":
-    //             document.getElementById("standardRoom").style.display = "none";
-    //             document.getElementById("description").style.display = "none";
-    //             document.getElementById("poolArea").style.display = "none";
-    //             document.getElementById("numberOfFloor").style.display = "none";
-    //             document.getElementById("facilityFree").style.display = "block";
-    //             break;
-    //         default:
-    //             document.getElementById("standardRoom").style.display = "none";
-    //             document.getElementById("description").style.display = "none";
-    //             document.getElementById("poolArea").style.display = "none";
-    //             document.getElementById("numberOfFloor").style.display = "none";
-    //             document.getElementById("facilityFree").style.display = "none";
-    //             break;
-    //     }
-    //
-    // }
 </script>
 </body>
 </body>

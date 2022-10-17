@@ -16,9 +16,8 @@
 <body>
 <div class="container-fluid">
     <div class="row" id="includedContent"></div>
-
     <div class="row">
-        <h2 class="list-facility" style="font-family: 'Nirmala UI'">Các Loại Dịch Vụ</h2>
+        <h2 class="list-facility" style="font-family: 'Nirmala UI'">Danh Sách Khách Hàng</h2>
         <div class="list-facility-subtitle">
             <p>
                 <a class="dropdown-item" href="create.html" style="color: blue">
@@ -26,10 +25,11 @@
                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                     </svg>
-                    Thêm Mới Dịch Vụ</a>
+                    Thêm Mới Khách Hàng</a>
             </p>
         </div>
     </div>
+
     <div class="row">
 
         <table class="table table-striped table-bordered" id="customerTable">
@@ -55,8 +55,11 @@
                 <td>0905678453</td>
                 <td>Diamond</td>
                 <td style="text-align: center">
-                    <a href="edit.html">
-                        <span class="text-warning"><i class="fa-solid fa-pen-to-square"></i></span>
+                    <a href="update.html">
+                        <span class="text-warning"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+</svg></span>
                     </a>
                 </td>
                 <td style="text-align: center">
@@ -244,11 +247,13 @@
     </div>
     <div class="row" id="includedFooter"></div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -263,7 +268,7 @@
         $('#customerTable').dataTable({
             "dom": 'lrtip',
             "lengthChange": false,
-            "pageLength": 1
+            "pageLength": 5
         });
     });
 </script>
