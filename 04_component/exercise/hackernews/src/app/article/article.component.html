@@ -1,0 +1,34 @@
+<div style="background: blanchedalmond;text-align: center"  >
+<h2>Today's article</h2>
+
+<div>
+  <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+</div>
+<hr>
+<div>
+  <div *ngFor="let art of articles">
+    <a href="{{art.url}}" target="_blank"><h5>{{art.title}}</h5></a>:<br> <app-like></app-like>
+  </div>
+</div>
+  <h2>Article Information</h2>
+  <table style="margin: auto">
+    <tr>
+      <td>Title:</td>
+      <td><textarea [(ngModel)]="article.title" cols="70"></textarea></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td>
+        <textarea [(ngModel)]="article.url" cols="70"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button style="float: right" (click)="addNewArticle()">Add</button>
+      </td>
+    </tr>
+  </table>
+<hr>
+@CodeGym, 2021
+</div>
