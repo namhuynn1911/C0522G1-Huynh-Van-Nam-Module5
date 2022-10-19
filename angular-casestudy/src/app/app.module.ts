@@ -9,6 +9,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ServiceListComponent } from './service-list/service-list.component';
 import { ServiceEditComponent } from './service-edit/service-edit.component';
 import { ServiceAddComponent } from './service-add/service-add.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ServiceAddComponent } from './service-add/service-add.component';
     NavigationComponent,
     ServiceListComponent,
     ServiceEditComponent,
-    ServiceAddComponent
+    ServiceAddComponent,
+    CustomerListComponent,
+    CustomerEditComponent
   ],
   imports: [
     BrowserModule
