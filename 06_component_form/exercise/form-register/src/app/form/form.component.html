@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Register Form</h2>
+    </div>
+  </div>
+  <div class="row" id="form">
+    <div class="col-lg-6 m-lg-auto" [formGroup]="registerFormGroup">
+      <div class="mt-3 mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name"/>
+      </div>
+      <div class="mb3 text-danger"
+           *ngIf="registerFormGroup.controls.name.hasError('required')
+           && registerFormGroup.controls.name.dirty">
+        Trường Tên Không Được Để Trống !!!
+      </div>
+<!--      <div class="mb3 text-danger"-->
+<!--           *ngIf="registerFormGroup.controls.name.hasError('pattern')-->
+<!--           && registerFormGroup.controls.name.dirty">-->
+<!--        Tên Phải Đúng Định Dạng !!!-->
+<!--      </div>-->
+      <div class="mt-3 mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email"/>
+      </div>
+      <div class="mb3 text-danger"
+           *ngIf="registerFormGroup.controls.email.errors
+           && registerFormGroup.controls.email.dirty">
+        Phải nhập đúng định dạng Email và không để trống !!!
+      </div>
+      <div formGroupName="password">
+      <div class="mt-3 mb-3">
+        <label for="passwordFirst" class="form-label">Password First</label>
+        <input type="password" class="form-control" id="passwordFirst" formControlName="passwordFirst"/>
+      </div>
+        <div class="mb3 text-danger"
+             *ngIf="registerFormGroup.get('password').hasError('minlength','passwordFirst')
+           && registerFormGroup.get('password').get('passwordFirst').touched">
+           Ít nhất 6 kí tự !!!
+        </div>
+        <div class="mb3 text-danger"
+             *ngIf="registerFormGroup.get('password').hasError('required','passwordFirst')
+           && registerFormGroup.get('password').get('passwordFirst').touched">
+          Không để trống !!!
+        </div>
+      <div class="mt-3 mb-3">
+        <label for="passwordSecond" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="passwordSecond" formControlName="passwordSecond"/>
+      </div>
+        <div class="mb3 text-danger"
+             *ngIf="registerFormGroup.controls.password.hasError('notSame')
+           && registerFormGroup.controls.password.dirty">
+          Password phải trùng  !!!
+        </div>
+
+      </div>
+      <div class="mt-3 mb-3">
+        <label for="country" class="form-label">Country</label>
+        <select id="country" class="form-select" formControlName="country">
+          <option *ngFor="let c of this.countryList" [ngValue]="c.name">{{c.name}}</option>
+        </select>
+      </div>
+      <div class="mt-3 mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" formControlName="age"/>
+      </div>
+      <div class="mb3 text-danger"
+           *ngIf="registerFormGroup.controls.age.errors
+           && registerFormGroup.controls.age.dirty">
+        Phải nhập đúng tuổi và không để trống !!!
+      </div>
+      <div class="mt-3 mb-3">
+        <label class="form-label">Gender </label>
+        <div class="d-flex">
+          <label class="d-block me-4">
+            <input type="radio" value="1" name="gender" formControlName="gender"> Male
+          </label>
+          <label class="d-block me-4">
+            <input type="radio" value="0" name="gender" formControlName="gender"> Female
+          </label>
+          <label class="d-block me-4">
+            <input type="radio" value="2" name="gender" formControlName="gender"> LGBT
+          </label>
+        </div>
+      </div>
+      <div class="mt-3 mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone" formControlName="phone"/>
+      </div>
+      <div class="mb3 text-danger"
+           *ngIf="registerFormGroup.controls.phone.errors
+           && registerFormGroup.controls.phone.dirty">
+        Phải nhập đúng định dạng số điện thoại và không để trống !!!
+      </div>
+      <button type="button" class="btn btn-primary" (click)="getVelue()"
+              [disabled]="registerFormGroup.invalid">Register</button>
+    </div>
+  </div>
+</div>
+<p>
+  kết quả:
+  {{notification}} <br>
+  {{result}}.
+</p>
