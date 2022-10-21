@@ -1,0 +1,13 @@
+<h2>Danh sách các từ vựng</h2>
+<table  class="table table-success table-striped">
+  <tr>
+    <th> No </th>
+    <th>Word</th>
+    <th>Translate</th>
+  </tr>
+  <tr *ngFor="let dic of this.dictionaryList;index as i">
+    <td>{{i+1}}</td>
+    <td>{{dic.word}}</td>
+    <td><a routerLink="/detail/{{dic.word}}">Translate</a></td>
+  </tr>
+</table>
