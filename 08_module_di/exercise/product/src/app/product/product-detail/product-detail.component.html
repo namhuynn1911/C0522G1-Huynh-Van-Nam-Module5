@@ -1,0 +1,26 @@
+<h1>Thông Tin Chi Tiết Saản Phâ</h1>
+<a routerLink="/product/list">Quay Lại Trang Danh Sách</a>
+<div *ngIf="product !=null">
+<table class="table table-striped">
+  <tr>
+    <td>
+      Tên sản phẩm: {{product.name}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Giá sản phẩm: {{product.price}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Mô tả sản pham: {{product.description}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Loại sản phẩm: {{product.category.categoryName}}
+    </td>
+  </tr>
+</table>
+</div>

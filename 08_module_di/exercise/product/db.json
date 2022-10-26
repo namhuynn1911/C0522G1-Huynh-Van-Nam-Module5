@@ -1,0 +1,38 @@
+{
+  "productList": [
+    {
+      "id": 1,
+      "name": "Iphone",
+      "price": 12000,
+      "description": "Mới",
+      "category": {
+        "categoryId": 2,
+        "categoryName": "Đồ dùng gia đình"
+      }
+    },
+    {
+      "name": "Máy Tính",
+      "price": 12000,
+      "description": "mới",
+      "category": {
+        "categoryId": 1,
+        "categoryName": "Đồ dùng cá nhân"
+      },
+      "id": 2
+    }
+  ],
+  "categoryList": [
+    {
+      "categoryId": 1,
+      "categoryName": "Đồ dùng cá nhân"
+    },
+    {
+      "categoryId": 2,
+      "categoryName": "Đồ dùng gia đình"
+    },
+    {
+      "categoryId": 3,
+      "categoryName": "Đồ dùng công nghiệp"
+    }
+  ]
+}

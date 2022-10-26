@@ -1,0 +1,13 @@
+<h1 style="text-align: center">Danh sách sản phẩm</h1>
+<table class="table table-striped"id="furama">
+  <tr class="text-center bg-warning bg-opacity-50">
+    <td>STT</td>
+    <td>Tên</td>
+  </tr>
+  <tr *ngFor="let category of categoryList; index as i" class="text-center">
+    <td>{{i + 1}}</td>
+    <td>{{category.categoryName}}
+    </td>
+  </tr>
+</table>
+
