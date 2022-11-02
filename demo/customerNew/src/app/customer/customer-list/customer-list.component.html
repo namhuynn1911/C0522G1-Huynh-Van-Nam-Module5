@@ -1,21 +1,13 @@
 <div class="p-3 px-5">
-  <h2 class="text-center fw-bold text-light mt-3">
-    DANH SÁCH KHÁCH HÀNG <i class="fa-solid fa-person-circle-question"></i></h2>
+  <h2 class="text-center fw-bold text-dark mt-3">
+    DANH SÁCH KHÁCH HÀNG</h2>
 
-  <div *ngIf="mess !== ''">
-    <div class="justify-content-center d-flex">
-      <div class="alert alert-success alert-dismissible fade show w-50 text-center">
-        <strong>{{mess}}</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-      </div>
-    </div>
-  </div>
 
   <nav class="navbar navbar-expand-lg py-0 my-0">
     <div class="container-fluid">
       <a routerLink="/customer/create">
-        <button class="btn btn-primary btn-outline-secondary">
-          <span class="fa-solid fa-person-circle-plus text-light h5 my-auto me-1"></span>
+        <button class="btn btn-dark btn-outline-secondary">
+          <i class="fa-solid fa-person-circle-plus text-light"></i>
           <span class="text-light"> Thêm mới khách hàng</span>
         </button>
       </a>
@@ -23,13 +15,7 @@
       <div class="d-flex my-2" role="search">
         <input class="form-control me-2" type="text" placeholder="Nhập tên.." aria-label="Search"
                [(ngModel)]="customerNameSearch">
-
-        <input class="form-control me-2" type="text" placeholder="Nhập địa chỉ.." aria-label="Search"
-               [(ngModel)]="customerAddressSearch">
-
-        <input class="form-control me-2" type="text" placeholder="Nhập SĐT.." aria-label="Search"
-               [(ngModel)]="customerPhoneSearch">
-        <button class="btn btn-light btn-outline-primary" (click)="searchByMore()">
+        <button class="btn btn-light btn-outline-primary" (click)="paginate()">
           <i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </div>
@@ -37,40 +23,40 @@
 
   <table class="table table-light table-striped table-bordered" id="customerTable">
     <thead>
-    <tr class="table-dark text-light">
-      <th class="text-center">STT <i class="fa-sharp fa-solid fa-bolt"></i></th>
-      <th>Tên khách hàng <i class="fa-solid fa-person-circle-question"></i></th>
-      <th>Ngày sinh <i class="fa-regular fa-calendar"></i></th>
-      <th>Giới tính <i class="fa-solid fa-heart"></i></th>
-      <th>Số CMND/CCCD <i class="fa-solid fa-id-card"></i></th>
-      <th>SĐT <i class="fa-solid fa-square-phone"></i></th>
-      <th>Địa chỉ <i class="fa-solid fa-map-location-dot"></i></th>
-      <th>Email <i class="fa-solid fa-envelope-circle-check"></i></th>
-      <th>Loại khách <i class="fa-solid fa-ranking-star"></i></th>
+    <tr class="table text-light" style="background: dodgerblue">
+      <th class="text-center">STT</th>
+      <th>Tên khách hàng </th>
+      <th>Ngày sinh </th>
+      <th>Giới tính</th>
+      <th>CMND/CCCD </th>
+      <th>SĐT </th>
+      <th>Địa chỉ </th>
+      <th>Email </th>
+      <th>Loại khách </th>
       <th class="text-center">Sửa</th>
       <th class="text-center">Xóa</th>
     </tr>
     </thead>
 
     <tbody>
-    <tr *ngFor="let item of customerList; index as i">
-      <td class="text-center">{{i + 1}}</td>
+    <tr *ngFor="let item of (customerList$ | async); index as i">
+      <td class="text-center">{{i + 1 +(page-1)*pageSize}}</td>
       <td>{{item.customerName | titlecase}}</td>
-      <td>{{item.customerBirthday | date: "dd/MM/yyyy"}}</td>
+      <td>{{item.birthday | date: "dd/MM/yyyy"}}</td>
       <td>
-        <span *ngIf="item.customerGender == 0">Nam</span>
-        <span *ngIf="item.customerGender == 1">Nữ</span>
-        <span *ngIf="item.customerGender == 2">LGBT</span>
+        <span *ngIf="item.gender == 0">Nam</span>
+        <span *ngIf="item.gender == 1">Nữ</span>
+        <span *ngIf="item.gender == 2">LGBT</span>
       </td>
-      <td>{{item.customerIdCard}}</td>
-      <td>{{item.customerPhone}}</td>
-      <td>{{item.customerAddress}}</td>
-      <td>{{item.customerEmail}}</td>
+      <td>{{item.idCard}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.email}}</td>
       <td>{{item.customerType.customerTypeName}}</td>
       <td class="text-center">
         <a routerLink="/customer/edit/{{item.id}}">
-          <button class="btn btn-success btn-outline-secondary btn-sm">
-            <span class="fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
+          <button class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-pen-to-square text-light"></i>
           </button>
         </a>
       </td>
@@ -78,12 +64,30 @@
         <button data-bs-toggle="modal" data-bs-target="#deleteCustomer"
                 class="btn btn-danger btn-outline-secondary btn-sm"
                 (click)="getInfoCustomerDelete(item.customerName, item.id)">
-          <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
+          <i class="fa-solid fa-user-xmark text-light"></i>
         </button>
       </td>
     </tr>
     </tbody>
   </table>
+
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination
+      [collectionSize]="(total$ | async)!"
+      [(page)]="page"
+      [maxSize]="5"
+      [pageSize]="pageSize"
+      (pageChange)="paginate()"
+    >
+    </ngb-pagination>
+
+    <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="paginate()">
+      <option [ngValue]="2">2 items per page</option>
+      <option [ngValue]="4">4 items per page</option>
+      <option [ngValue]="6">6 items per page</option>
+      <option [ngValue]="50">50 items per page</option>
+    </select>
+  </div>
 
 <!--  <nav aria-label="..." class="justify-content-center d-flex">-->
 <!--    <ul class="pagination">-->
@@ -105,7 +109,7 @@
 <!--      </li>-->
 <!--    </ul>-->
 <!--  </nav>-->
-</div>
+<!--</div>-->
 
 <div class="modal fade" id="deleteCustomer" tabindex="-1" aria-labelledby="exampleModalLabel1"
      aria-hidden="true">
@@ -126,4 +130,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
