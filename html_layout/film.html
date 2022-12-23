@@ -1,10 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="file.css">
+    <link rel="stylesheet" href="file.css">
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/carosel.css">
+    <link rel="stylesheet" href="style/navbar.css">
 </head>
-<body>
-$END$
+<body style="background-color: black">
+<div class="row header">
+    <div class="col-8">
+        <a href="index.html" class="logo">
+            <img src="img/rum.png" alt="">
+        </a>
+        <div class="logo-copy">
+            <h1 class="site-title">CO522G1</h1>
+            <small class="site-description">Đà Nẵng city</small>
+        </div>
+    </div>
+    <div class="col-4  mt-4">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-10">
+        <ul class="menu-bar">
+            <li><a href="#" class="text-light"> Watch Now</a></li>
+            <li><a href="#" class="text-light">Movies</a></li>
+            <li><a href="#" class="text-light"> TV Shows</a></li>
+            <li><a href="#" class="text-light">Sports</a></li>
+            <li><a href="#" class="text-light">Kids</a></li>
+            <li><a href="#" class="text-light">Library</a></li>
+        </ul>
+    </div>
+    <div class="col-2 mt-2">
+        <a href="#" class="header__logo-link mx-3 log">
+            <i class="fa-solid fa-user" style="color: white"></i>Đăng nhập</a>
+        <a href="#" class="header__logo-link log">
+            <i class="fa-solid fa-right-from-bracket" style="color: white">
+            </i>Thoát</a>
+    </div>
+</div>
+
+
+<div class="row">
+    <div>
+        <div class="mySlides">
+
+            <img class="banner-img" src="https://media.voocdn.com/media/image/id/5ffc1bdaacc3991eac8b4576"
+                 style="width:100%;">
+        </div>
+
+        <div class="mySlides">
+
+            <img class="banner-img" src="https://media.voocdn.com/media/image/id/5ffecf80acc399f9748b4567"
+                 style="width:100%">
+        </div>
+
+        <div class="mySlides">
+
+            <img class="banner-img" src="https://media.voocdn.com/media/image/id/5fe1d553acc399f27d8b457f"
+                 style="width:100%">
+        </div>
+
+        <div class="mySlides">
+
+            <img class="banner-img" src="https://media.voocdn.com/media/image/id/5fcf56eeacc399ff878b458d"
+                 style="width:100%">
+        </div>
+
+        <div class="mySlides">
+
+            <img class="banner-img" src="https://media.voocdn.com/media/image/id/5ffffd22acc399f08c8b4570"
+                 style="width:100%">
+        </div>
+
+        <div class="mySlides">
+
+            <img class="banner-img" src="https://media.voocdn.com/media/image/id/5fe95449acc399ab9d8b4577"
+                 style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="https://media.voocdn.com/media/image/id/5ffc1bdaacc3991eac8b4576"
+                     style="width:100%"
+                     onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://media.voocdn.com/media/image/id/5ffecf80acc399f9748b4567"
+                     style="width:100%"
+                     onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://media.voocdn.com/media/image/id/5fe1d553acc399f27d8b457f"
+                     style="width:100%"
+                     onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://media.voocdn.com/media/image/id/5fcf56eeacc399ff878b458d"
+                     style="width:100%"
+                     onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://media.voocdn.com/media/image/id/5ffffd22acc399f08c8b4570"
+                     style="width:100%"
+                     onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://media.voocdn.com/media/image/id/5fe95449acc399ab9d8b4577"
+                     style="width:100%"
+                     onclick="currentSlide(6)" alt="Snowy Mountains">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="div_8" class="row mt-3 mb-3" style="background-color: orange;height: 40px">
+    <h4 style="text-align: center;color: black">PHIM HOT TẠI RẠP</h4>
+</div>
+<div class="row" style="margin: auto">
+    <div class="col-6 mb-5">
+        <button class="bt1"><a>Phim đang chiếu</a></button>
+        <button class="bt1"><a>Phim sắp chiếu</a></button>
+    </div>
+    <div class="col-6" style="margin-right: auto">
+        <div class="header__search">
+            <div class="header__search-input-wrap">
+                <input type="text" class="header__search-input" placeholder="Tìm kiếm phim...">
+                <div class="header__search-history">
+                </div>
+            </div>
+            <a href="">
+                <button class="header__search-btn">
+                    <i class="header__search-btn-icon fas fa-search"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <!--            <div class="facility-group mb-5">-->
+    <!--                <div class="row">-->
+    <!--                    <div class="col-md-4 col-sm-8 col-12">-->
+    <!--                        <div class="card div_10" style="width: 280px;">-->
+    <!--                            <img-->
+    <!--                                    src="https://abogovillas.com/wp-content/uploads/2020/11/abogo-furama-villa-da-nang-3bedrooms-ho-boi.jpg"-->
+    <!--                                    height="200px" class="card-img-top" alt="...">-->
+    <!--                            <div class="card-body">-->
+    <!--                                <h5 class="card-title">Villa</h5>-->
+    <!--                                <p class="card-text">Phòng Villa/Diện Tích 120 m2 .</p>-->
+    <!--                                <a href="#" class="btn btn-primary">Đặt Phòng</a>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div class="col-md-4 col-sm-8 col-12">-->
+    <!--                        <div class="card div_10" style="width: 280px;">-->
+    <!--                            <img-->
+    <!--                                    src="https://resortdanang.info/wp-content/uploads/2018/12/phong-khach-villas-3-bedroom-furama-da-nang.jpg"-->
+    <!--                                    height="200px" class="card-img-top"-->
+    <!--                                    alt="...">-->
+    <!--                            <div class="card-body">-->
+    <!--                                <h5 class="card-title">House</h5>-->
+    <!--                                <p class="card-text">Phòng House/Diện Tích 50 m2</p>-->
+    <!--                                <a href="#" class="btn btn-primary">Đặt Phòng</a>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div class="col-md-4 col-sm-8 col-12">-->
+    <!--                        <div class="card div_10" style="width: 280px;">-->
+    <!--                            <img-->
+    <!--                                    src="https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Beach_Pool_Villas_Bedroom-1-1047x563.jpg"-->
+    <!--                                    height="200px" class="card-img-top" alt="...">-->
+    <!--                            <div class="card-body">-->
+    <!--                                <h5 class="card-title">Rom</h5>-->
+    <!--                                <p class="card-text">Phòng Rom/Diện Tích <40 m2.</p>-->
+    <!--                                <a href="#" class="btn btn-primary">Đặt Phòng</a>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <div class="slide-container swiper" style="background-color:white">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <img style="width: 400px"
+                                 src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px" style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team-member text-center team-wrap">
+                        <div class="team-img">
+                            <div>
+                                <img style="width: 400px"
+                                     src="http://deothemes.com/envato/enigma/html/img/team_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Đặt Vé</button>
+                        </div>
+                        <h6 class="team-title">John Marshall</h6>
+                        <span>Designer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+
+<footer class="row flex-rw">
+    <ul class="footer-list-top">
+        <li>
+            <h4 class="footer-list-header">GIỚI THIỆU</h4></li>
+        <li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">VỀ CHÚNG
+            TÔI</a></li>
+        <li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">THỎA THUẬN SỬ
+            DỤNG</a></li>
+        <li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor"
+               itemprop="significantLink">QUY CHẾ HOẠT ĐỘNG</a></li>
+
+        <li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">CHÍNH SÁCH
+            BẢO MẬT</a></li>
+    </ul>
+    <ul class="footer-list-top">
+        <li>
+            <h4 class="footer-list-header"> HỔ TRỢ</h4></li>
+
+
+        <li><a href='/Angels/cat/id/70' class="generic-anchor footer-list-anchor">GÁP Ý</a></li>
+        <li><a href='/Home-Decor/cat/id/64' class="generic-anchor footer-list-anchor">SALE & SERVICE</a></li>
+        <li><a href='/Mugs/cat/id/32' class="generic-anchor footer-list-anchor">RẠP / GIÁ VÉ</a></li>
+        <li><a href='/Pet-Lover/cat/id/108' class="generic-anchor footer-list-anchor">TUYỂN DỤNG</a></li>
+    </ul>
+    <ul class="footer-list-top">
+        <li id='help'>
+            <h4 class="footer-list-header">GÓC ĐIỆN ẢNH</h4></li>
+        <li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor"
+               itemprop="significantLink">THỂ LOẠI PHIM</a></li>
+        <li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">BÌNH LUẬN PHIM</a>
+        </li>
+        <li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor"
+                                 itemprop="significantLink">BLOG ĐIỆN ẢNH</a></li>
+        <li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor"
+                                      itemprop="significantLink">PHIM HAY THÁNG</a></li>
+
+    </ul>
+    <section class="footer-social-section flex-rw">
+      <span class="footer-social-overlap footer-social-connect">
+      LIÊN KẾT <span class="footer-social-small">CỦA</span> CINEMA
+      </span>
+        <span class="footer-social-overlap footer-social-icons-wrapper">
+      <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest"
+         itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+      <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook"
+         itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter"
+         itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+      <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram"
+         itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank"
+         title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+      <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus"
+         itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+      </span>
+    </section>
+    <section class="footer-bottom-section flex-rw">
+        <div class="footer-bottom-wrapper">
+            <i class="bi bi-facebook"></i>
+
+            </i> 2019 Pavilion in
+            <address class="footer-address" role="company address">Bergen, NY</address>
+            <span class="footer-bottom-rights"> - All Rights Reserved - </span>
+        </div>
+        <div class="footer-bottom-wrapper">
+            <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a
+                href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+        </div>
+    </section>
+</footer>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>
+<!-- AUTOPLAY -->
+<script>
+    // Automatic Slideshow - change image every 3 seconds
+    let myIndex = 0;
+    carousel();
+
+    function carousel() {
+        let i;
+        let x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000);
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="style/swiper-bundle.min.js"></script>
+
+<script src="style/slide.js"></script>
 </body>
 </html>

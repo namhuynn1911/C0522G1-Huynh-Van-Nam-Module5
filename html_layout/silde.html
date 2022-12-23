@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+</style>
 </head>
 <body>
-$END$
+<div class="row" style="background-image: url(https://media.zicxa.com/6004261)">
+    <div class="w3-content w3-section">
+        <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+
+        <img class="mySlides w3-animate-fading"
+             src="https://cdn.nguyenkimmall.com/images/detailed/740/phim-bo-gia-tran-thanh-viet-nam.jpg"
+             style="width:1000px;height: 600px">
+        <img class="mySlides w3-animate-fading"
+             src="https://image.thanhnien.vn/w1024/Uploaded/2022/jvunzvu/2022_10_20/anh-4-du-kien-phim-black-adam-se-thu-ve-tu-7075-trieu-do-la-trong-tuan-cong-chieu-dau-tien-anh-brandiconimagecom-6565.jpeg"
+             style="width:1000px;height: 600px">
+        <img class="mySlides w3-animate-fading"
+             src="https://static-images.vnncdn.net/files/publish/thong-diep-y-nghia-hanh-trinh-tiep-noi-niem-tin-cua-pnj-ab3864751aaf4c4bb2fda3651d47c6ef.jpg"
+             style="width:1000px;height: 600px">
+        <img class="mySlides w3-animate-fading"
+             src="https://topshare.com.vn/htdocs/images/news/2019/03/24/800/phim_ho_t_h_nh_chi_u_r_p_01.jpg"
+             style="width:1000px;height: 600px">
+    </div>
+</div>
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {``
+            myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000);
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

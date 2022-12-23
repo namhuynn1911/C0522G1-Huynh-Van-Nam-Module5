@@ -15,13 +15,13 @@ export class ProductCreateComponent implements OnInit {
   categoryList: Category[];
 
   productForm: FormGroup = new FormGroup({
-      id: new FormControl('', Validators.required),
-      name: new FormControl('', Validators.required),
-      price: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required),
+      name: new FormControl(),
+      price: new FormControl(),
+      description: new FormControl(),
       category: new FormControl()
     }
   );
+
   constructor(private productService: ProductServiceService,
               private router: Router,
               private categoryService: CategoryService) {
@@ -36,8 +36,8 @@ export class ProductCreateComponent implements OnInit {
   }
 
   click() {
-    let product: Product;
-    product = this.productForm.value;
+    const product: Product = this.productForm.value;
+    console.log(product);
     this.productService.saveCreate(product).subscribe(value => {
       this.productForm.reset();
     }, error => {

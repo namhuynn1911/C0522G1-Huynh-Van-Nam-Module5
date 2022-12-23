@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ProductServiceService} from '../../service/product-service.service';
 import {Router} from '@angular/router';
 
@@ -10,10 +10,10 @@ import {Router} from '@angular/router';
 })
 export class ProductCreateComponent implements OnInit {
   productForm: FormGroup = new FormGroup({
-      id: new FormControl(),
-      name: new FormControl(),
-      price: new FormControl(),
-      description: new FormControl()
+      id: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      price: new FormControl('', Validators.required),
+      description: new FormControl('', Validators.required)
     }
   );
 

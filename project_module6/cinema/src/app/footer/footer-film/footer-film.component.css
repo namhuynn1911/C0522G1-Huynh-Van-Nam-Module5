@@ -1,0 +1,111 @@
+.footer{
+  background-image: url(https://haycafe.vn/wp-content/uploads/2022/01/Hinh-nen-vu-tru-khong-gian-huyen-bi-bao-la-voi-nhieu-hanh-tinh.jpg);
+  width: 100%;
+  height: 304px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.par{
+  font-size: 1.4rem;
+  color: orange;
+  font-weight: 300;
+}
+
+.footer__right-name{
+  font-size: 1.8rem;
+  color: orange;
+  font-weight: 500;
+}
+.footer__right-list{
+  list-style: none;
+}
+.footer__right-item a{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: orange;
+  display: block;
+  line-height: 1.4rem;
+  padding: 9px 0;
+}
+.footer1{
+  width: 100%;
+  height: 65px;
+  background-color: #020d18;
+  border-top: 1px solid #405266;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 380px;
+  padding-right: 380px;
+}
+.footer1-left{
+  color: #B4B0BA;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.footer1-left p a {
+  text-decoration: none;
+  color: royalblue;
+}
+.footer1-left p a:hover{
+  color: #8b9831;
+}
+.footer1-right a{
+  text-decoration: none;
+  color: royalblue;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.footer1-right a:hover{
+  color: orange;
+}
+.header__logo-text b{
+  font-size: 3rem;
+  font-weight: 700;
+  color: orange;
+}
+.header__logo-text span{
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: orange;
+}
+#footer_span{
+  margin-top: 90px;
+}
+.site-footer {
+  color: white;
+  background-image: url(https://haycafe.vn/wp-content/uploads/2022/01/Hinh-nen-vu-tru-khong-gian-huyen-bi-bao-la-voi-nhieu-hanh-tinh.jpg);
+  padding: 50px 0; }
+.site-footer .widget {
+  margin-bottom: 30px; }
+.site-footer .widget-title {
+  color: white;
+  font-weight: 300; }
+.site-footer .subscribe-form input[type="text"] {
+  width: 100%;
+  border: 1px solid #bec1c8;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: white;
+  font-size: 13px;
+  font-size: 0.8666666667em;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+.site-footer .subscribe-form input[type="text"]:focus, .site-footer .subscribe-form input[type="text"]:hover {
+  border-color: #ffaa3c; }
+.site-footer a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+.site-footer a:hover {
+  color: #ffaa3c; }
+.site-footer .colophon {
+  padding-top: 30px; }
+.site-footer ul{
+  list-style: none;
+}

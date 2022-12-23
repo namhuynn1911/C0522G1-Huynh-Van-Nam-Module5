@@ -25,7 +25,7 @@ export class ProductServiceService {
   }
 
   saveCreate(productObj: Product): Observable<Product> {
-    return this.httpClient.post(this.API_URL, productObj);
+    return this.httpClient.post<Product>(this.API_URL, productObj);
   }
 
   deleteProduct(productId: number): Observable<Product> {

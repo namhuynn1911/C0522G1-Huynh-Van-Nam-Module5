@@ -1,4 +1,16 @@
 <h1 style="text-align: center">Danh sách sản phẩm</h1>
+<div class="d-flex my-2" role="search" style="float: right">
+  <input style="width: 400px;height: 40px" class="form-control me-3" type="search" placeholder="Nhập tên.." aria-label="Search"
+         [(ngModel)]="productNameSearch">
+
+  <input style="width: 400px;height: 40px" class="form-control me-3" type="search" placeholder="Nhập mô tả.." aria-label="Search"
+         [(ngModel)]="productDescribeSearch">
+  <button class="btn btn-primary " (click)="searchByMore()" style="width: 50px;height: 40px">
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+  </button>
+</div>
 <table class="table table-striped"id="furama">
   <tr class="text-center bg-warning bg-opacity-50">
     <td>STT</td>
@@ -22,7 +34,31 @@
       </svg>
     </a></td>
     <td>
-      <a (click)="onDelete(product.id, product.name)" class="btn btn-danger text-dark">Xóa</a>
+      <button data-bs-toggle="modal" data-bs-target="#deleteCustomer"
+              class="btn btn-danger text-dark btn-sm"
+              (click)="getInfoProductDelete(product.name, product.id)">
+        Delete
+      </button>
     </td>
   </tr>
 </table>
+<div class="modal fade" id="deleteCustomer" tabindex="-1" aria-labelledby="exampleModalLabel1"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content modalCSS">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel1">Bạn có chắc chắn muốn xóa?</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <span class="h6">Khách hàng:</span><strong class="text-danger ps-2">{{productNameDelete}}</strong>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        <button type="submit" class="btn btn-danger" data-bs-dismiss="modal" (click)="deleteProduct()">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>

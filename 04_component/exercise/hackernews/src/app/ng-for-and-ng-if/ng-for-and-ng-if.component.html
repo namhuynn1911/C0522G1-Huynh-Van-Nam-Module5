@@ -1,0 +1,20 @@
+<h1>Danh sách học viên</h1>
+<table>
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Data Birth</th>
+    <th>Gender</th>
+  </tr>
+  <tr *ngFor="let studentObj of this.studentList;index as i">
+    <td>{{i+1}}</td>
+    <td>{{studentObj.name}}</td>
+    <td>{{studentObj.dateOfBirth}}</td>
+    <td>
+      <span *ngIf="studentObj.gender == 1">Male</span>
+      <span *ngIf="studentObj.gender == 0">Famale</span>
+      <span *ngIf="studentObj.gender == 2">LGBT</span>
+    </td>
+
+  </tr>
+</table>

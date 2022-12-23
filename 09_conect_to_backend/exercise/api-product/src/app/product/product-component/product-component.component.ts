@@ -11,20 +11,20 @@ import {CategoryService} from '../../service/category.service';
 })
 export class ProductComponentComponent implements OnInit {
   productList: Product[];
-categoryList: Category[]
+categoryList: Category[];
 
   constructor(private productService: ProductServiceService,
               private categoryService: CategoryService) {
   }
 
   ngOnInit(): void {
-    this.categoryService.findAll().subscribe(value => {
-      this.categoryList = value;
-    }, error => {
-      console.log(error);
-    }, () => {
-      console.log('complete');
-    });
+    // this.categoryService.findAll().subscribe(value => {
+    //   this.categoryList = value;
+    // }, error => {
+    //   console.log(error);
+    // }, () => {
+    //   console.log('complete');
+    // });
     this.productService.findAll().subscribe(value => {
       this.productList = value;
     }, error => {

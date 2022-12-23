@@ -10,6 +10,11 @@ import {Router} from '@angular/router';
 })
 export class ProductListComponent implements OnInit {
   productList: Product[];
+  productNameDelete: string;
+  productIdDelete: number;
+  mess: string;
+  productNameSearch = '';
+  productDescribeSearch = '';
 
   constructor(private productService: ProductService, private router: Router) {
   }
@@ -24,15 +29,32 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  onDelete(id: number, name: string) {
-    if (confirm('Ban có chắc xóa ' + name)) {
-      this.productService.deleteProduct(id, name).subscribe(value => {
-        this.ngOnInit();
-      }, error => {
-      }, () => {
-        this.router.navigateByUrl('/product/list');
-      });
-    }
+  getInfoProductDelete(name: string, id: number) {
+    this.productNameDelete = name;
+    this.productIdDelete = id;
+  }
+
+  deleteProduct(): void {
+    this.productService.deleteProduct(this.productIdDelete).subscribe(() => {
+      this.ngOnInit();
+      this.mess = 'Xóa san phẩm  [' + this.productNameDelete + '] thành công!';
+    }, error => {
+      console.log(error);
+    }, () => {
+      console.log('Xóa khách hàng thành công!');
+    });
+  }
+
+  searchByMore() {
+    this.productService.findAllProduct().subscribe(value => {
+      this.productList = value.filter(item => item.name.toLowerCase().includes(this.productNameSearch.toLowerCase())
+        && item.description.toLowerCase().includes(this.productDescribeSearch.toLowerCase()));
+    }, error => {
+      console.log(error);
+    }, () => {
+      console.log('Tìm kiếm khách hàng có tên là: "' + this.productNameSearch + '" (có ' + this.productList.length + ' kết quả).');
+    });
   }
 }
+
 

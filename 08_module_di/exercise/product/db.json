@@ -11,14 +11,34 @@
       }
     },
     {
-      "name": "Máy Tính",
-      "price": 12000,
-      "description": "mới",
+      "name": "Máy tính",
+      "price": 32342,
+      "description": "sf",
       "category": {
         "categoryId": 1,
         "categoryName": "Đồ dùng cá nhân"
       },
       "id": 2
+    },
+    {
+      "name": "Oto",
+      "price": 15000,
+      "description": "mới",
+      "category": {
+        "categoryId": 2,
+        "categoryName": "Đồ dùng gia đình"
+      },
+      "id": 3
+    },
+    {
+      "name": "Kính mắt",
+      "price": 1200,
+      "description": "củ",
+      "category": {
+        "categoryId": 1,
+        "categoryName": "Đồ dùng cá nhân"
+      },
+      "id": 4
     }
   ],
   "categoryList": [

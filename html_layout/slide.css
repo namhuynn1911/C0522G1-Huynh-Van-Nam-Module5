@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card-vip{
+    width: 100px;
+    height: 700px;
+}
+.team-member,
+.team-img {
+    position: relative;
+    overflow: hidden;
+}
+.team-title {
+    margin: 30px 0 7px;
+}
+
+.team-img:hover .team-details {
+    opacity: 1;
+    margin-top: -80px;
+}
+
+.team-img:hover .overlay {
+    opacity: 1;
+}
+
+

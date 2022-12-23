@@ -19,7 +19,7 @@ export class ProductUpdateComponent implements OnInit {
       this.productId = Number(paramMap.get('id'));
       const product = this.getProduct(this.productId);
       this.productForm = new FormGroup({
-        // id: new FormControl(product.id),
+        id: new FormControl(product.id),
         name: new FormControl(product.name),
         price: new FormControl(product.price),
         description: new FormControl(product.description)

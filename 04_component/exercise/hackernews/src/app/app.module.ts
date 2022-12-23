@@ -7,6 +7,9 @@ import { ArticleComponent } from './article/article.component';
 import {FormsModule} from '@angular/forms';
 import { LikeComponent } from './like/like.component';
 import { FooterComponent } from './footer/footer.component';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
+import { NgForAndNgIfComponent } from './ng-for-and-ng-if/ng-for-and-ng-if.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     ArticleComponent,
     LikeComponent,
-    FooterComponent
+    FooterComponent,
+    ParentComponentComponent,
+    ChildComponentComponent,
+    NgForAndNgIfComponent
   ],
     imports: [
         BrowserModule,

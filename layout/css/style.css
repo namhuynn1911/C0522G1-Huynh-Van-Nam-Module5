@@ -150,4 +150,16 @@ body {
 .left:hover {
     overflow: scroll;
 }
+.btnCard {
+position: absolute;
+    top: 100px;
+
+    /*z-index: 999;*/
+}
+.btnCard a{
+    text-decoration: none;
+}
+.card {
+    position: relative;
+}
 
